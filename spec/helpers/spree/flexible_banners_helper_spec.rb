@@ -1,15 +1,15 @@
 require 'spec_helper'
 
 describe Spree::FlexibleBannersHelper do
-  context '.insert_banner' do
-    it 'should return body of first banner' do
-      banner = Spree::FlexibleBanner.new(body: 'test')
+  context '.banner' do
+    it 'should first banner' do
+      banner = Spree::FlexibleBanner.new(name: 'test', body: '<p>body</p>')
       banner.save
-      expect(helper.insert_banner).to eq(banner.body)
+      expect(helper.banner).to eq(banner)
     end
 
     it 'should return nil when no banner' do
-      expect(helper.insert_banner).to be_nil
+      expect(helper.banner).to be_nil
     end
   end
 end

@@ -1,7 +1,7 @@
 module SpreeFlexibleBanner
   class Engine < Rails::Engine
     require 'spree/core'
-    isolate_namespace Spree
+    # isolate_namespace Spree
     engine_name 'spree_flexible_banner'
 
     # use rspec for tests

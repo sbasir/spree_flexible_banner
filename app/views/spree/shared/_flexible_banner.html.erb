@@ -1,3 +1,4 @@
 <div id='flexible_banner'>
-  <%= insert_banner %>
+  <% @banner = banner %>
+  <%= link_to raw(@banner.body), @banner.link %>
 </div>

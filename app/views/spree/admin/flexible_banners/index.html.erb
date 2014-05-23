@@ -1,11 +1,11 @@
 <%= render 'spree/admin/shared/configuration_menu' %>
 
-<% content_for :flexible_banner_actions do %>
-  <li><%= button_link_to Spree.t("flexible_banner.new"), new_object_url, :icon => 'fa-plus', :id => 'admin_new_flexible_banner' %></li>
+<% content_for :page_actions do %>
+  <li><%= button_link_to Spree.t("flexible_banner_page.new"), new_object_url, :icon => 'plus', :id => 'admin_new_flexible_banner' %></li>
 <% end %>
 
-<% content_for :flexible_banner_title do %>
-   <%= Spree.t("flexible_banner.title") %>
+<% content_for :page_title do %>
+   <%= Spree.t("flexible_banner_page.title") %>
 <% end %>
 
 <% if @flexible_banners.any? %>
@@ -18,7 +18,7 @@
   <thead>
     <tr data-hook="admin_flexible_banners_index_headers">
       <th><%= Spree::FlexibleBanner.human_attribute_name(:name) %></th>
-      <th><%= Spree.t("flexible_banner.link") %></th>
+      <th><%= Spree.t("flexible_banner_page.link") %></th>
       <th data-hook="admin_flexible_banners_index_header_actions" class="actions"></th>
     </tr>
   </thead>

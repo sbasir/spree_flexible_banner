@@ -16,10 +16,10 @@ en:
     admin:
       tab:
         flexible_banners: Banners
-    back_to_flexible_banners_list: "Back to flexible banners list"
+    back_to_flexible_banners_list: "Back to Flexible Banners list"
     flexible_banner: Banner
     flexible_banners: Banners
-    flexible_banner:
+    flexible_banner_page:
       title: Flexible Banners
       new: New Banner
       editing: Editing Banner

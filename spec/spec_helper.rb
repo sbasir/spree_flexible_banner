@@ -34,6 +34,8 @@ require 'spree_flexible_banner/factories'
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
+  config.include Spree::TestingSupport::ControllerRequests
+  config.include Spree::TestingSupport::AuthorizationHelpers::Controller
 
   # == URL Helpers
   #
@@ -80,4 +82,9 @@ RSpec.configure do |config|
 
   config.fail_fast = ENV['FAIL_FAST'] || false
   config.order = "random"
+
+  config.before(:each) do
+    current_user = create(:admin_user, :spree_api_key => SecureRandom.hex(24))
+    Spree::Admin::BaseController.any_instance.stub(:spree_current_user).and_return(current_user)
+  end  
 end

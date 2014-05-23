@@ -1,5 +1,26 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
+---
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      spree/flexible_banner:
+        name: Name
+        body: Body
+        link: "Link (URL)"
+    models:
+      spree/flexible_banner:
+        few: Banners
+        many: Banners
+        one: Banner
+        other: Banners
+  spree:
+    admin:
+      tab:
+        flexible_banners: Banners
+    back_to_flexible_banners_list: "Back to flexible banners list"
+    flexible_banner: Banner
+    flexible_banners: Banners
+    flexible_banner:
+      title: Flexible Banners
+      new: New Banner
+      editing: Editing Banner
+      link: Link

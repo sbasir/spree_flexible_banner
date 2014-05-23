@@ -1,0 +1,48 @@
+<%= render 'spree/admin/shared/configuration_menu' %>
+
+<% content_for :flexible_banner_actions do %>
+  <li><%= button_link_to Spree.t("flexible_banner.new"), new_object_url, :icon => 'fa-plus', :id => 'admin_new_flexible_banner' %></li>
+<% end %>
+
+<% content_for :flexible_banner_title do %>
+   <%= Spree.t("flexible_banner.title") %>
+<% end %>
+
+<% if @flexible_banners.any? %>
+<table class="index responsive" id="listing_flexible_banners" data-hook>
+  <colgroup>
+    <col style="width: 20%">
+    <col style="width: 65%">
+    <col style="width: 15%">
+  </colgroup>
+  <thead>
+    <tr data-hook="admin_flexible_banners_index_headers">
+      <th><%= Spree::FlexibleBanner.human_attribute_name(:name) %></th>
+      <th><%= Spree.t("flexible_banner.link") %></th>
+      <th data-hook="admin_flexible_banners_index_header_actions" class="actions"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flexible_banners.each do |flexible_banner| %>
+      <tr data-hook="admin_flexible_banners_index_rows" class="<%= cycle('odd', 'even') %>" id="<%= dom_id flexible_banner %>">
+        <td>
+          <%= flexible_banner.name %>
+        </td>
+        <td>
+          <%= link_to flexible_banner.link, flexible_banner.link, :target => '_blank' %>
+        </td>
+        <td class="actions" data-hook="admin_flexible_banners_index_row_actions">
+          <%= link_to_edit flexible_banner, :no_text => true %>
+          <%= link_to_delete flexible_banner, :no_text => true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% else %>
+  <div class="alpha twelve columns no-objects-found">
+    <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/flexible_banner')) %>,
+    <%= link_to Spree.t(:add_one), spree.new_admin_flexible_banner_path %>!
+  </div>
+<% end %>

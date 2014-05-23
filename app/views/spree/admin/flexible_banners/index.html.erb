@@ -1,11 +1,11 @@
 <%= render 'spree/admin/shared/configuration_menu' %>
 
-<% content_for :page_actions do %>
-  <li><%= button_link_to Spree.t("flexible_banner_page.new"), new_object_url, :icon => 'plus', :id => 'admin_new_flexible_banner' %></li>
-<% end %>
-
 <% content_for :page_title do %>
    <%= Spree.t("flexible_banner_page.title") %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <li><%= button_link_to Spree.t("flexible_banner_page.new"), new_object_url, :icon => 'plus', :id => 'admin_new_flexible_banner' %></li>
 <% end %>
 
 <% if @flexible_banners.any? %>

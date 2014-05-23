@@ -3,11 +3,11 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_flexible_banner'
   s.version     = '2.2.3.beta'
-  s.summary     = 'TODO: Add gem summary here'
+  s.summary     = 'Spree Extension to add a flexible banner'
   s.description = 'TODO: Add (optional) gem description here'
   s.required_ruby_version = '>= 1.9.3'
 
-  # s.author    = 'You'
+  s.author    = 'Sofy Basir'
   # s.email     = 'you@example.com'
   # s.homepage  = 'http://www.spreecommerce.com'
 

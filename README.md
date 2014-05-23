@@ -36,4 +36,4 @@ Simply add this require statement to your spec_helper:
 require 'spree_flexible_banner/factories'
 ```
 
-Copyright (c) 2014 [name of extension creator], released under the New BSD License
+Copyright (c) 2014 Sofy Basir, released under the New BSD License

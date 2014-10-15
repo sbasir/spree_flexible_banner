@@ -19,6 +19,15 @@ bundle
 bundle exec rails g spree_flexible_banner:install
 ```
 
+Using
+-----
+Add a deface override to add the banner partial:
+
+```ruby root/app/overrides/spree/layouts/spree_application/add_flexible_banner.html.erb.deface
+<!-- insert_before "#wrapper" -->
+<%= render partial: 'spree/shared/flexible_banner' %>
+```
+
 Testing
 -------
 

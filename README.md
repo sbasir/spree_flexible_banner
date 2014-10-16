@@ -27,6 +27,12 @@ Add a deface override to add the banner partial:
 <!-- insert_before "#wrapper" -->
 <%= render partial: 'spree/shared/flexible_banner' %>
 ```
+or for ajax
+```
+<!-- insert_before '#wrapper' -->
+<%= render partial: 'spree/shared/flexible_banner_ajax' %>
+```
+
 
 Testing
 -------

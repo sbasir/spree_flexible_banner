@@ -2,3 +2,20 @@
 Placeholder manifest file.
 the installer will append this file to the app vendored assets here: 'vendor/assets/stylesheets/spree/frontend/all.css'
 */
+#flexible_banner {
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.0980392);
+  display: block;
+  background-color: rgba(0, 0, 0, 0.0470588);
+
+  margin: 10px;
+  outline-color: rgb(0, 0, 0);
+  outline-style: none;
+  outline-width: 0px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 35px;
+  padding-top: 10px;
+}

@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.name        = 'spree_flexible_banner'
   s.version     = '2.2.3.beta'
   s.summary     = 'Spree Extension to add a flexible banner'
-  s.description = 'TODO: Add (optional) gem description here'
+  s.description = 'Show banners in Spree'
   s.required_ruby_version = '>= 1.9.3'
 
   s.author    = 'Sofy Basir'

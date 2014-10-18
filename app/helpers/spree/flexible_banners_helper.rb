@@ -1,7 +1,7 @@
 module Spree::FlexibleBannersHelper
 
   def banner
-    Spree::FlexibleBanner.first
+    Spree::FlexibleBanner.where(active: true).first
   end
   
 end

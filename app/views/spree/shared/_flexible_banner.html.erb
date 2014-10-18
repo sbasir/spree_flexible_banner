@@ -1,8 +1,10 @@
+<% @banner = banner;
+if @banner %>
 <div id="flexible_banner">
-  <% @banner = banner %>
   <%= link_to(@banner.link) do %>
   <div id="banner_wrapper">
     <%= raw(@banner.body) %>
   </div>
   <% end %>
 </div>
+<% end %>

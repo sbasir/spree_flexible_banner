@@ -12,13 +12,15 @@
 <table class="index responsive" id="listing_flexible_banners" data-hook>
   <colgroup>
     <col style="width: 20%">
-    <col style="width: 65%">
+    <col style="width: 60%">
     <col style="width: 15%">
+    <col style="width: 5%">
   </colgroup>
   <thead>
     <tr data-hook="admin_flexible_banners_index_headers">
       <th><%= Spree::FlexibleBanner.human_attribute_name(:name) %></th>
       <th><%= Spree.t("flexible_banner_page.link") %></th>
+      <th><%= Spree::FlexibleBanner.human_attribute_name(:active) %></th>
       <th data-hook="admin_flexible_banners_index_header_actions" class="actions"></th>
     </tr>
   </thead>
@@ -31,6 +33,9 @@
         </td>
         <td>
           <%= link_to flexible_banner.link, flexible_banner.link, :target => '_blank' %>
+        </td>
+        <td>
+          <%= flexible_banner.active %>
         </td>
         <td class="actions" data-hook="admin_flexible_banners_index_row_actions">
           <%= link_to_edit flexible_banner, :no_text => true %>
